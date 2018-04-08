@@ -3,16 +3,13 @@
 //
 
 #include "CUniversalCard.hpp"
-CUniversalCard::CUniversalCard(const std::shared_ptr<CPassport> &m_passport,
-                               const std::shared_ptr<CBankCard> &m_bank_card,
-                               const std::shared_ptr<CInsurance> &m_insurance)
-    : m_passport(m_passport), m_bank_card(m_bank_card), m_insurance(m_insurance) {}
-const std::shared_ptr<CPassport> &CUniversalCard::getM_passport() const {
-  return m_passport;
-}
-const std::shared_ptr<CBankCard> &CUniversalCard::getM_bank_card() const {
-  return m_bank_card;
-}
-const std::shared_ptr<CInsurance> &CUniversalCard::getM_insurance() const {
-  return m_insurance;
-}
+CUniversalCard::CUniversalCard(const std::string &m_name,
+                               const std::string &m_bank_name,
+                               uint64_t m_passport_id,
+                               uint64_t m_insurance_id,
+                               uint64_t m_bank_card_id)
+    : m_name(m_name),
+      m_bank_name(m_bank_name),
+      m_passport_id(m_passport_id),
+      m_insurance_id(m_insurance_id),
+      m_bank_card_id(m_bank_card_id) {}

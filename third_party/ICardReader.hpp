@@ -6,7 +6,7 @@
 #define UNIVERSAL_CARD_ICARDREADER_HPP
 
 #include <cstdint>
-/// third party card reader interface
+/// A third party card reader interface
 class ICardReader {
  public:
   /// Read card status

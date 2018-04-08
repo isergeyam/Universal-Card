@@ -17,6 +17,7 @@ class CUniversalCardReader : public ICardReader {
  public:
   explicit CUniversalCardReader(const std::shared_ptr<ICardReader> &m_instance);
   ReadCardStatus ReadCard(uintptr_t begin, uintptr_t end, void *output_buffer) override ;
+  CUniversalCard* GetUniversalCard();
   CPassport* GetPassport();
   CInsurance* GetInsurance();
   CBankCard* GetBankCard();

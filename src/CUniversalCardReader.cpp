@@ -27,3 +27,6 @@ CBankCard *CUniversalCardReader::GetBankCard() {
   uintptr_t begin = sizeof(CPassport) + sizeof(CInsurance);
   return reinterpret_cast<CBankCard*>(_M_Read_Card(begin, begin+sizeof(CBankCard)));
 }
+CUniversalCard *CUniversalCardReader::GetUniversalCard() {
+  return reinterpret_cast<CUniversalCard*>(_M_Read_Card(0, sizeof(CUniversalCard)));
+}
