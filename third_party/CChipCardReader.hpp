@@ -10,10 +10,11 @@
 #include <cstring>
 /// Third party chip card reader
 class CChipCardReader : public ICardReader  {
+ public:
+  using device_t = void*;
  private:
   device_t m_reader;
  public:
-  using device_t = void*;
   /**
    * \brief Construct chip card reader.
    * @param[in] m_reader pointer to reader device bus

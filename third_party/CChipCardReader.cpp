@@ -7,8 +7,7 @@ CChipCardReader::ReadCardStatus CChipCardReader::ReadCard(uintptr_t begin, uintp
   if (m_reader==nullptr)
     return DEVICE_CONNECTION_FAILED;
   // device interacting stub
-  std::memcpy(output_buffer, m_reader, end-begin);
-  m_reader +=end-begin;
+  std::memcpy(output_buffer, reinterpret_cast<char*>(m_reader)+begin, end-begin);
   return OK;
 }
 CChipCardReader::CChipCardReader(device_t m_reader) : m_reader(m_reader) {}

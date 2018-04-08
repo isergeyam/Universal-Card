@@ -10,8 +10,8 @@
 class CDecryptUniversalCard {
  public:
   /**
-   * \brief Decrypt universal card data with the given code
-   * \details Function decrypts card data, obtained from CardReader
+   * @brief Decrypt universal card data with the given code
+   * @details Function decrypts card data, obtained from CardReader
    * @param [in,out] card data buffer
    * @param [in] code code to apply on the data
    */

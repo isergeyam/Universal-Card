@@ -11,22 +11,22 @@ ICardReader::ReadCardStatus CUniversalCardReader::ReadCard(uintptr_t begin, uint
   CDecryptUniversalCard::Decrypt(output_buffer, 0);
   return m_ans;
 }
-CPassport *CUniversalCardReader::GetPassport() {
-  return reinterpret_cast<CPassport*>(_M_Read_Card(0, sizeof(CPassport)));
+std::shared_ptr<CPassport> CUniversalCardReader::GetPassport() {
+  return std::shared_ptr<CPassport>(reinterpret_cast<CPassport*>(_M_Read_Card(0, sizeof(CPassport))));
 }
-CInsurance *CUniversalCardReader::GetInsurance() {
+std::shared_ptr<CInsurance> CUniversalCardReader::GetInsurance() {
   uintptr_t begin = sizeof(CPassport);
-  return reinterpret_cast<CInsurance*>(_M_Read_Card(begin, begin+sizeof(CInsurance)));
+  return std::shared_ptr<CInsurance>(reinterpret_cast<CInsurance*>(_M_Read_Card(begin, begin+sizeof(CInsurance))));
 }
 void *CUniversalCardReader::_M_Read_Card(uintptr_t begin, uintptr_t end) {
   void *ans = operator new(end-begin);
   ReadCard(begin, end, ans);
   return ans;
 }
-CBankCard *CUniversalCardReader::GetBankCard() {
+std::shared_ptr<CBankCard> CUniversalCardReader::GetBankCard() {
   uintptr_t begin = sizeof(CPassport) + sizeof(CInsurance);
-  return reinterpret_cast<CBankCard*>(_M_Read_Card(begin, begin+sizeof(CBankCard)));
+  return std::shared_ptr<CBankCard>(reinterpret_cast<CBankCard*>(_M_Read_Card(begin, begin+sizeof(CBankCard))));
 }
-CUniversalCard *CUniversalCardReader::GetUniversalCard() {
-  return m_factory.Create(GetPassport(), GetInsurance(), GetBankCard());
+std::shared_ptr<CUniversalCard> CUniversalCardReader::GetUniversalCard() {
+  return m_factory.Create(*GetPassport(), *GetInsurance(), *GetBankCard());
 }

@@ -19,10 +19,10 @@ class CUniversalCardReader : public ICardReader {
  public:
   explicit CUniversalCardReader(const std::shared_ptr<ICardReader> &m_instance);
   ReadCardStatus ReadCard(uintptr_t begin, uintptr_t end, void *output_buffer) override ;
-  CUniversalCard* GetUniversalCard();
-  CPassport* GetPassport();
-  CInsurance* GetInsurance();
-  CBankCard* GetBankCard();
+  std::shared_ptr<CUniversalCard> GetUniversalCard();
+  std::shared_ptr<CPassport> GetPassport();
+  std::shared_ptr<CInsurance> GetInsurance();
+  std::shared_ptr<CBankCard> GetBankCard();
 };
 
 #endif //UNIVERSAL_CARD_CUNIVERSALCARDREADER_HPP

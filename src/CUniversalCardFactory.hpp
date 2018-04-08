@@ -7,7 +7,9 @@
 #include "CUniversalCard.hpp"
 class CUniversalCardFactory {
  public:
-  CUniversalCard* Create(CPassport *m_passport, CInsurance *m_insurance, CBankCard *m_bank_card);
+  std::shared_ptr<CUniversalCard> Create(const CPassport &m_passport,
+                                         const CInsurance &m_insurance,
+                                         const CBankCard &m_bank_card);
 };
 
 #endif //UNIVERSAL_CARD_CUNIVERSALCARDFACTORY_HPP

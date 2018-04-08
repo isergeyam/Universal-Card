@@ -13,6 +13,8 @@ class CInsurance {
   CInsurance(const std::string &m_name, uint64_t m_insurance_id);
   const std::string &getM_name() const;
   uint64_t getM_insurance_id() const;
+  bool operator==(const CInsurance &rhs) const;
+  bool operator!=(const CInsurance &rhs) const;
 };
 
 #endif //UNIVERSAL_CARD_CINSURANCE_HPP

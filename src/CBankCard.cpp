@@ -16,3 +16,11 @@ const std::string &CBankCard::getM_bank_name() const {
 uint64_t CBankCard::getM_card_id() const {
   return m_card_id;
 }
+bool CBankCard::operator==(const CBankCard &rhs) const {
+  return m_bank_name==rhs.m_bank_name &&
+      m_card_id==rhs.m_card_id &&
+      m_name==rhs.m_name;
+}
+bool CBankCard::operator!=(const CBankCard &rhs) const {
+  return !(rhs==*this);
+}

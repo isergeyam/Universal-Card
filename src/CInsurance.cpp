@@ -11,3 +11,10 @@ const std::string &CInsurance::getM_name() const {
 uint64_t CInsurance::getM_insurance_id() const {
   return m_insurance_id;
 }
+bool CInsurance::operator==(const CInsurance &rhs) const {
+  return m_name==rhs.m_name &&
+      m_insurance_id==rhs.m_insurance_id;
+}
+bool CInsurance::operator!=(const CInsurance &rhs) const {
+  return !(rhs==*this);
+}

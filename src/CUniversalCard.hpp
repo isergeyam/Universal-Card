@@ -17,6 +17,9 @@ class CUniversalCard {
   uint64_t m_bank_card_id;
   friend class CDecryptUniversalCard;
  public:
+  bool operator==(const CUniversalCard &rhs) const;
+  bool operator!=(const CUniversalCard &rhs) const;
+ public:
   CUniversalCard(const std::string &m_name,
                  const std::string &m_bank_name,
                  uint64_t m_passport_id,

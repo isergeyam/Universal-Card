@@ -10,3 +10,10 @@ const std::string &CPassport::getM_name() const {
 uint64_t CPassport::getM_passport_id() const {
   return m_passport_id;
 }
+bool CPassport::operator==(const CPassport &rhs) const {
+  return m_name==rhs.m_name &&
+      m_passport_id==rhs.m_passport_id;
+}
+bool CPassport::operator!=(const CPassport &rhs) const {
+  return !(rhs==*this);
+}

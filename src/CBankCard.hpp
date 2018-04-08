@@ -13,10 +13,12 @@ class CBankCard {
   const std::string &getM_name() const;
   const std::string &getM_bank_name() const;
   uint64_t getM_card_id() const;
+  bool operator==(const CBankCard &rhs) const;
+  bool operator!=(const CBankCard &rhs) const;
  private:
-  std::string m_name;
   std::string m_bank_name;
   uint64_t m_card_id;
+  std::string m_name;
 };
 
 #endif //UNIVERSAL_CARD_CBANKCARD_HPP
