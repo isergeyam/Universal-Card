@@ -3,5 +3,7 @@
 //
 
 #include "CBankCard.hpp"
-CBankCard::CBankCard(const std::string &m_bank_name, uint64_t m_card_id)
-    : m_bank_name(m_bank_name), m_card_id(m_card_id) {}
+CBankCard::CBankCard(const std::string &m_bank_name,
+                     uint64_t m_card_id,
+                     const std::string &m_name)
+    : m_bank_name(m_bank_name), m_card_id(m_card_id), m_name(m_name) {}

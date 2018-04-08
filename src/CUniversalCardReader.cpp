@@ -19,7 +19,7 @@ CInsurance *CUniversalCardReader::GetInsurance() {
   return reinterpret_cast<CInsurance*>(_M_Read_Card(begin, begin+sizeof(CInsurance)));
 }
 void *CUniversalCardReader::_M_Read_Card(uintptr_t begin, uintptr_t end) {
-  void *ans = operator new(sizeof(CPassport));
+  void *ans = operator new(end-begin);
   ReadCard(begin, end, ans);
   return ans;
 }

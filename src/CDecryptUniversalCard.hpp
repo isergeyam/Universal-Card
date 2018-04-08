@@ -5,7 +5,7 @@
 #ifndef UNIVERSAL_CARD_CDECRYPTCARD_HPP
 #define UNIVERSAL_CARD_CDECRYPTCARD_HPP
 
-#include <iostream>
+#include "CUniversalCard.hpp"
 /// Universal card decryptor
 class CDecryptUniversalCard {
  public:
