@@ -28,5 +28,5 @@ CBankCard *CUniversalCardReader::GetBankCard() {
   return reinterpret_cast<CBankCard*>(_M_Read_Card(begin, begin+sizeof(CBankCard)));
 }
 CUniversalCard *CUniversalCardReader::GetUniversalCard() {
-  return reinterpret_cast<CUniversalCard*>(_M_Read_Card(0, sizeof(CUniversalCard)));
+  return m_factory.Create(GetPassport(), GetInsurance(), GetBankCard());
 }

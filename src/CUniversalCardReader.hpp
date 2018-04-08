@@ -9,10 +9,12 @@
 #include "CPassport.hpp"
 #include "CInsurance.hpp"
 #include "CBankCard.hpp"
+#include "CUniversalCardFactory.hpp"
 #include <memory>
 class CUniversalCardReader : public ICardReader {
  private:
   std::shared_ptr<ICardReader> m_instance;
+  CUniversalCardFactory m_factory;
   void* _M_Read_Card(uintptr_t begin, uintptr_t end);
  public:
   explicit CUniversalCardReader(const std::shared_ptr<ICardReader> &m_instance);
