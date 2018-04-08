@@ -1,0 +1,92 @@
+\hypertarget{classICardReader}{}\section{I\+Card\+Reader Class Reference}
+\label{classICardReader}\index{I\+Card\+Reader@{I\+Card\+Reader}}
+
+
+A third party card reader interface.  
+
+
+
+
+{\ttfamily \#include $<$I\+Card\+Reader.\+hpp$>$}
+
+
+
+Inheritance diagram for I\+Card\+Reader\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9}{Read\+Card\+Status} \{ \hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9a95f57da1a6edeca38313d3890a5042b1}{OK}, 
+\hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9a3d6dd451ad843c8def4efb5aeb9cb0c3}{D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED}, 
+\hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9a83eadef5a734515fab8b56ef0407e388}{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+C\+A\+RD}, 
+\hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9af747871097d8b51e57e1b29fb5003093}{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN}
+ \}\begin{DoxyCompactList}\small\item\em Read card status. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9}{Read\+Card\+Status} \hyperlink{classICardReader_a6f94003b973662f97c16a19052a8984d}{Read\+Card} (uintptr\+\_\+t begin, uintptr\+\_\+t end, void $\ast$output\+\_\+buffer)=0
+\begin{DoxyCompactList}\small\item\em Reads Card Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A third party card reader interface. 
+
+\subsection{Member Enumeration Documentation}
+\index{I\+Card\+Reader@{I\+Card\+Reader}!Read\+Card\+Status@{Read\+Card\+Status}}
+\index{Read\+Card\+Status@{Read\+Card\+Status}!I\+Card\+Reader@{I\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Read\+Card\+Status}{ReadCardStatus}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+Card\+Reader\+::\+Read\+Card\+Status}}\hypertarget{classICardReader_a3b289f13ac2a90f46950289aafb551a9}{}\label{classICardReader_a3b289f13ac2a90f46950289aafb551a9}
+
+
+Read card status. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{OK@{OK}!I\+Card\+Reader@{I\+Card\+Reader}}\index{I\+Card\+Reader@{I\+Card\+Reader}!OK@{OK}}\item[{\em 
+OK\hypertarget{classICardReader_a3b289f13ac2a90f46950289aafb551a9a95f57da1a6edeca38313d3890a5042b1}{}\label{classICardReader_a3b289f13ac2a90f46950289aafb551a9a95f57da1a6edeca38313d3890a5042b1}
+}]no errors \index{D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED@{D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED}!I\+Card\+Reader@{I\+Card\+Reader}}\index{I\+Card\+Reader@{I\+Card\+Reader}!D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED@{D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED}}\item[{\em 
+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED\hypertarget{classICardReader_a3b289f13ac2a90f46950289aafb551a9a3d6dd451ad843c8def4efb5aeb9cb0c3}{}\label{classICardReader_a3b289f13ac2a90f46950289aafb551a9a3d6dd451ad843c8def4efb5aeb9cb0c3}
+}]can\textquotesingle{}t connect to device via given bus \index{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+C\+A\+RD@{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+C\+A\+RD}!I\+Card\+Reader@{I\+Card\+Reader}}\index{I\+Card\+Reader@{I\+Card\+Reader}!R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+C\+A\+RD@{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+C\+A\+RD}}\item[{\em 
+R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+C\+A\+RD\hypertarget{classICardReader_a3b289f13ac2a90f46950289aafb551a9a83eadef5a734515fab8b56ef0407e388}{}\label{classICardReader_a3b289f13ac2a90f46950289aafb551a9a83eadef5a734515fab8b56ef0407e388}
+}]can\textquotesingle{}t read card because there is nothing to read \index{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN@{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN}!I\+Card\+Reader@{I\+Card\+Reader}}\index{I\+Card\+Reader@{I\+Card\+Reader}!R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN@{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN}}\item[{\em 
+R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN\hypertarget{classICardReader_a3b289f13ac2a90f46950289aafb551a9af747871097d8b51e57e1b29fb5003093}{}\label{classICardReader_a3b289f13ac2a90f46950289aafb551a9af747871097d8b51e57e1b29fb5003093}
+}]unknown error while reading a card \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{I\+Card\+Reader@{I\+Card\+Reader}!Read\+Card@{Read\+Card}}
+\index{Read\+Card@{Read\+Card}!I\+Card\+Reader@{I\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Read\+Card(uintptr\+\_\+t begin, uintptr\+\_\+t end, void $\ast$output\+\_\+buffer)=0}{ReadCard(uintptr_t begin, uintptr_t end, void *output_buffer)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Read\+Card\+Status} I\+Card\+Reader\+::\+Read\+Card (
+\begin{DoxyParamCaption}
+\item[{uintptr\+\_\+t}]{begin, }
+\item[{uintptr\+\_\+t}]{end, }
+\item[{void $\ast$}]{output\+\_\+buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classICardReader_a6f94003b973662f97c16a19052a8984d}{}\label{classICardReader_a6f94003b973662f97c16a19052a8984d}
+
+
+Reads Card Data. 
+
+This function reads data from the card 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em begin} & the pointer to start reading on \\
+\hline
+\mbox{\tt in}  & {\em end} & the pointer to end reading on \\
+\hline
+\mbox{\tt out}  & {\em output\+\_\+buffer} & buffer, where to store the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reading status code 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classCUniversalCardReader_a91e8d783d421cd8130175f1e533a287a}{C\+Universal\+Card\+Reader}, and \hyperlink{classCChipCardReader_a2630579b71679cdec624417614505728}{C\+Chip\+Card\+Reader}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sg/\+C\+Lion\+Projects/\+Universal-\/\+Card/third\+\_\+party/I\+Card\+Reader.\+hpp\end{DoxyCompactItemize}

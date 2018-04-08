@@ -1,0 +1,151 @@
+\hypertarget{classCUniversalCardReader}{}\section{C\+Universal\+Card\+Reader Class Reference}
+\label{classCUniversalCardReader}\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+
+
+Universal Card Reader (decorates card reader)  
+
+
+
+
+{\ttfamily \#include $<$C\+Universal\+Card\+Reader.\+hpp$>$}
+
+
+
+Inheritance diagram for C\+Universal\+Card\+Reader\+:
+% FIG 0
+
+
+Collaboration diagram for C\+Universal\+Card\+Reader\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCUniversalCardReader_a8938d472093944f454f57185f0ce717b}{C\+Universal\+Card\+Reader} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classICardReader}{I\+Card\+Reader} $>$ \&m\+\_\+instance)
+\begin{DoxyCompactList}\small\item\em constructs reader, using the given one. \end{DoxyCompactList}\item 
+\hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9}{Read\+Card\+Status} \hyperlink{classCUniversalCardReader_a91e8d783d421cd8130175f1e533a287a}{Read\+Card} (uintptr\+\_\+t begin, uintptr\+\_\+t end, void $\ast$output\+\_\+buffer) override
+\begin{DoxyCompactList}\small\item\em Reads Card Data. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCUniversalCard}{C\+Universal\+Card} $>$ \hyperlink{classCUniversalCardReader_a7aa5d11c6b6bb2f8ff57229616e513f0}{Get\+Universal\+Card} ()
+\begin{DoxyCompactList}\small\item\em Read universal card. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPassport}{C\+Passport} $>$ \hyperlink{classCUniversalCardReader_afe8ecb2721d79d3002a3cf1077391379}{Get\+Passport} ()
+\begin{DoxyCompactList}\small\item\em Read passport. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCInsurance}{C\+Insurance} $>$ \hyperlink{classCUniversalCardReader_acf9be9b26f2e13b5e8956021c9a4f528}{Get\+Insurance} ()
+\begin{DoxyCompactList}\small\item\em Read insurance. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCBankCard}{C\+Bank\+Card} $>$ \hyperlink{classCUniversalCardReader_a9105d8da39ffdf831852c5fffc6e1556}{Get\+Bank\+Card} ()
+\begin{DoxyCompactList}\small\item\em Read bank card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Universal Card Reader (decorates card reader) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{C\+Universal\+Card\+Reader(const std\+::shared\+\_\+ptr$<$ I\+Card\+Reader $>$ \&m\+\_\+instance)}{CUniversalCardReader(const std::shared_ptr< ICardReader > &m_instance)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+Universal\+Card\+Reader\+::\+C\+Universal\+Card\+Reader (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ {\bf I\+Card\+Reader} $>$ \&}]{m\+\_\+instance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classCUniversalCardReader_a8938d472093944f454f57185f0ce717b}{}\label{classCUniversalCardReader_a8938d472093944f454f57185f0ce717b}
+
+
+constructs reader, using the given one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+instance} & instance of the reader to be decorated \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!Get\+Bank\+Card@{Get\+Bank\+Card}}
+\index{Get\+Bank\+Card@{Get\+Bank\+Card}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Bank\+Card()}{GetBankCard()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf C\+Bank\+Card} $>$ C\+Universal\+Card\+Reader\+::\+Get\+Bank\+Card (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCUniversalCardReader_a9105d8da39ffdf831852c5fffc6e1556}{}\label{classCUniversalCardReader_a9105d8da39ffdf831852c5fffc6e1556}
+
+
+Read bank card. 
+
+\begin{DoxyReturn}{Returns}
+bank card read 
+\end{DoxyReturn}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!Get\+Insurance@{Get\+Insurance}}
+\index{Get\+Insurance@{Get\+Insurance}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Insurance()}{GetInsurance()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf C\+Insurance} $>$ C\+Universal\+Card\+Reader\+::\+Get\+Insurance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCUniversalCardReader_acf9be9b26f2e13b5e8956021c9a4f528}{}\label{classCUniversalCardReader_acf9be9b26f2e13b5e8956021c9a4f528}
+
+
+Read insurance. 
+
+\begin{DoxyReturn}{Returns}
+insurance read 
+\end{DoxyReturn}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!Get\+Passport@{Get\+Passport}}
+\index{Get\+Passport@{Get\+Passport}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Passport()}{GetPassport()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf C\+Passport} $>$ C\+Universal\+Card\+Reader\+::\+Get\+Passport (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCUniversalCardReader_afe8ecb2721d79d3002a3cf1077391379}{}\label{classCUniversalCardReader_afe8ecb2721d79d3002a3cf1077391379}
+
+
+Read passport. 
+
+\begin{DoxyReturn}{Returns}
+passport read 
+\end{DoxyReturn}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!Get\+Universal\+Card@{Get\+Universal\+Card}}
+\index{Get\+Universal\+Card@{Get\+Universal\+Card}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Universal\+Card()}{GetUniversalCard()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf C\+Universal\+Card} $>$ C\+Universal\+Card\+Reader\+::\+Get\+Universal\+Card (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCUniversalCardReader_a7aa5d11c6b6bb2f8ff57229616e513f0}{}\label{classCUniversalCardReader_a7aa5d11c6b6bb2f8ff57229616e513f0}
+
+
+Read universal card. 
+
+\begin{DoxyReturn}{Returns}
+universal card read 
+\end{DoxyReturn}
+\index{C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}!Read\+Card@{Read\+Card}}
+\index{Read\+Card@{Read\+Card}!C\+Universal\+Card\+Reader@{C\+Universal\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Read\+Card(uintptr\+\_\+t begin, uintptr\+\_\+t end, void $\ast$output\+\_\+buffer) override}{ReadCard(uintptr_t begin, uintptr_t end, void *output_buffer) override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Card\+Reader\+::\+Read\+Card\+Status} C\+Universal\+Card\+Reader\+::\+Read\+Card (
+\begin{DoxyParamCaption}
+\item[{uintptr\+\_\+t}]{begin, }
+\item[{uintptr\+\_\+t}]{end, }
+\item[{void $\ast$}]{output\+\_\+buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classCUniversalCardReader_a91e8d783d421cd8130175f1e533a287a}{}\label{classCUniversalCardReader_a91e8d783d421cd8130175f1e533a287a}
+
+
+Reads Card Data. 
+
+This function reads data from the card 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em begin} & the pointer to start reading on \\
+\hline
+\mbox{\tt in}  & {\em end} & the pointer to end reading on \\
+\hline
+\mbox{\tt out}  & {\em output\+\_\+buffer} & buffer, where to store the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reading status code 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classICardReader_a6f94003b973662f97c16a19052a8984d}{I\+Card\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sg/\+C\+Lion\+Projects/\+Universal-\/\+Card/src/C\+Universal\+Card\+Reader.\+hpp\item 
+/home/sg/\+C\+Lion\+Projects/\+Universal-\/\+Card/src/C\+Universal\+Card\+Reader.\+cpp\end{DoxyCompactItemize}

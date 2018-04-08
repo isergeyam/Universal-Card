@@ -1,0 +1,92 @@
+\hypertarget{classCChipCardReader}{}\section{C\+Chip\+Card\+Reader Class Reference}
+\label{classCChipCardReader}\index{C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}}
+
+
+Third party chip card reader.  
+
+
+
+
+{\ttfamily \#include $<$C\+Chip\+Card\+Reader.\+hpp$>$}
+
+
+
+Inheritance diagram for C\+Chip\+Card\+Reader\+:
+% FIG 0
+
+
+Collaboration diagram for C\+Chip\+Card\+Reader\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries device\+\_\+t} = void $\ast$\hypertarget{classCChipCardReader_adbf07198f729330de9faa2201f0d470a}{}\label{classCChipCardReader_adbf07198f729330de9faa2201f0d470a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCChipCardReader_af80ecf276eed276d755907707a21e79c}{C\+Chip\+Card\+Reader} (device\+\_\+t m\+\_\+reader)
+\begin{DoxyCompactList}\small\item\em Construct chip card reader. \end{DoxyCompactList}\item 
+\hyperlink{classICardReader_a3b289f13ac2a90f46950289aafb551a9}{Read\+Card\+Status} \hyperlink{classCChipCardReader_a2630579b71679cdec624417614505728}{Read\+Card} (uintptr\+\_\+t begin, uintptr\+\_\+t end, void $\ast$output\+\_\+buffer) override
+\begin{DoxyCompactList}\small\item\em Reads Card Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Third party chip card reader. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}!C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}}
+\index{C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}!C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{C\+Chip\+Card\+Reader(device\+\_\+t m\+\_\+reader)}{CChipCardReader(device_t m_reader)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+Chip\+Card\+Reader\+::\+C\+Chip\+Card\+Reader (
+\begin{DoxyParamCaption}
+\item[{device\+\_\+t}]{m\+\_\+reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classCChipCardReader_af80ecf276eed276d755907707a21e79c}{}\label{classCChipCardReader_af80ecf276eed276d755907707a21e79c}
+
+
+Construct chip card reader. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em m\+\_\+reader} & pointer to reader device bus \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}!Read\+Card@{Read\+Card}}
+\index{Read\+Card@{Read\+Card}!C\+Chip\+Card\+Reader@{C\+Chip\+Card\+Reader}}
+\subsubsection[{\texorpdfstring{Read\+Card(uintptr\+\_\+t begin, uintptr\+\_\+t end, void $\ast$output\+\_\+buffer) override}{ReadCard(uintptr_t begin, uintptr_t end, void *output_buffer) override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Chip\+Card\+Reader\+::\+Read\+Card\+Status} C\+Chip\+Card\+Reader\+::\+Read\+Card (
+\begin{DoxyParamCaption}
+\item[{uintptr\+\_\+t}]{begin, }
+\item[{uintptr\+\_\+t}]{end, }
+\item[{void $\ast$}]{output\+\_\+buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classCChipCardReader_a2630579b71679cdec624417614505728}{}\label{classCChipCardReader_a2630579b71679cdec624417614505728}
+
+
+Reads Card Data. 
+
+This function reads data from the card 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em begin} & the pointer to start reading on \\
+\hline
+\mbox{\tt in}  & {\em end} & the pointer to end reading on \\
+\hline
+\mbox{\tt out}  & {\em output\+\_\+buffer} & buffer, where to store the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reading status code 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classICardReader_a6f94003b973662f97c16a19052a8984d}{I\+Card\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sg/\+C\+Lion\+Projects/\+Universal-\/\+Card/third\+\_\+party/C\+Chip\+Card\+Reader.\+hpp\item 
+/home/sg/\+C\+Lion\+Projects/\+Universal-\/\+Card/third\+\_\+party/C\+Chip\+Card\+Reader.\+cpp\end{DoxyCompactItemize}
