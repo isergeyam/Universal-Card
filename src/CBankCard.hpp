@@ -5,8 +5,15 @@
 #ifndef UNIVERSAL_CARD_CBANKCARD_HPP
 #define UNIVERSAL_CARD_CBANKCARD_HPP
 #include <string>
+/// Bank Card storage class
 class CBankCard {
  public:
+  /**
+   * @brief constructs Bank Card
+   * @param [in] m_bank_name bank name
+   * @param [in] m_card_id card id
+   * @param [in] m_name user name
+   */
   CBankCard(const std::string &m_bank_name,
             uint64_t m_card_id,
             const std::string &m_name);
